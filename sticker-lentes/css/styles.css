@@ -1,4 +1,136 @@
-.container{
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: linear-gradient(145deg, #1e1e1e, #383838);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+  overflow: hidden;
+}
+.bg-primary {
+  background-color: #cccc;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #2c2c2c;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+#video {
+  width: 600px;
+  height: 450px;
+  border-radius: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+#pacienteFoto {
+  width: 150px;
+  height: 100px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  border-radius: 10px;
+  border: 2px solid #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+button {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background-color: #2c2c2c;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  font-size: 25px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #2c2c2c;
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+input[type="image"] {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+input[type="image"]:hover {
+  transform: scale(1.05);
+}
+
+input[type="image"]:active {
+  transform: scale(0.95);
+}
+
+.file-selector-button {
+  margin-top: 10px;
+  background-color: #2c2c2c;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.file-selector-button:hover {
+  background-color: #3d3d3d;
+  transform: scale(1.05);
+}
+
+.file-selector-button:active {
+  transform: scale(0.95);
+}
+
+#btn_cancelar {
+  display: inline-block;
+  width: 79px;
+  height: 30px;
+  margin-left: 30%;
+  text-align: center;
+  text-decoration: none;
+  background-color: rgb(194, 9, 9); /* Fondo rojo */
+  color: white; /* Texto blanco */
+  font-family: Arial, sans-serif; /* Fuente */
+  font-size: 14px; /* Tamaño de fuente */
+  line-height: 30px; /* Alineación vertical del texto */
+  border-radius: 5px; /* Bordes redondeados */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+  transition: background-color 0.3s, transform 0.2s; /* Transiciones suaves */
+  cursor: pointer; /* Cursor tipo puntero */
+  padding: 5px; /* Espaciado interno */
+}
+
+#btn_aceptar {
+  display: inline-block;
+  width: 79px;
+  height: 40px;
+  margin-left: 30%;
+  text-align: center;
+  text-decoration: none;
+  background-color: green; /* Fondo rojo */
+  color: white; /* Texto blanco */
+  font-family: Arial, sans-serif; /* Fuente */
+  font-size: 14px; /* Tamaño de fuente */
+  line-height: 30px; /* Alineación vertical del texto */
+  border-radius: 5px; /* Bordes redondeados */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+  transition: background-color 0.3s, transform 0.2s; /* Transiciones suaves */
+  cursor: pointer; /* Cursor tipo puntero */
+  padding: 5px; /* Espaciado interno */
 }
