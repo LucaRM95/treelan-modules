@@ -21,12 +21,11 @@
             <div class="frame">
                 <div class="corner"></div>
             </div>
-            <img id="pacienteFoto" onclick="location.href = '<?php echo $Paciente_Foto ?>'" src="<?php echo $Paciente_Foto ?>" alt="Foto del Sticker" />
+            <img id="stickerFoto" onclick="location.href = '<?php echo $Sticker_Foto ?>'" src="<?php echo $Sticker_Foto ?>" alt="Foto del Sticker" />
             <br>
             <button type="button" id="capture">📷</button>
             <button style="margin-left: 80px;" type="button" id="selectFile" class="file-selector-button">📝</button>
             <br>
-            <button type="button" id="selectFile" class="file-selector-button" hidden>Seleccionar Archivo</button>
 
             <form id="WM2" name="WM2" method="post" enctype="multipart/form-data" action="sticker_pict.php">
                 <input type="file" name="archivo1" id="fileInput" style="display: none;" />

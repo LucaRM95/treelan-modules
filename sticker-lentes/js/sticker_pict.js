@@ -7,9 +7,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const canvas = document.createElement("canvas");
   const captureButton = document.getElementById("capture");
   const fileInput = document.getElementById("fileInput");
-  const pacienteFoto = document.getElementById("pacienteFoto");
+  const stickerFoto = document.getElementById("stickerFoto");
   const selectFileButton = document.getElementById("selectFile");
-  const stickerButton = document.getElementById("stickerButton");
 
   // Acceder a la cámara
   navigator.mediaDevices
@@ -21,9 +20,8 @@ document.addEventListener("DOMContentLoaded", function () {
     })
     .catch((error) => {
       console.error("Error al acceder a la cámara:", error);
-      alert(
-        "No se pudo acceder a la cámara. Por favor, verifica los permisos."
-      );
+      alert("No se pudo acceder a la cámara o intento subir un archivo vacío.");
+      window.location.replace("sticker_pict.php");
     });
 
   // Función para capturar imagen
@@ -45,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
           dataTransfer.items.add(file);
           fileInput.files = dataTransfer.files;
           const newImageURL = URL.createObjectURL(file);
-          pacienteFoto.src = newImageURL;
+          stickerFoto.src = newImageURL;
         } else {
           alert("Error al capturar la imagen.");
         }
@@ -76,12 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (fileInput.files.length > 0) {
       const file = fileInput.files[0];
       const newImageURL = URL.createObjectURL(file);
-      pacienteFoto.src = newImageURL;
+      stickerFoto.src = newImageURL;
     }
-  });
-
-  /* Evento para abrir camara de stickers de lentes */
-  stickerButton.addEventListener("click", () => {
-    console.log("Abriendo camara.....");
   });
 });
