@@ -18,7 +18,10 @@
             <label for="capture">Presione espacio para capturar...</label>
             <br>
             <video id="video" autoplay playsinline></video>
-            <img id="pacienteFoto" onclick="location.href = '<?php echo $Paciente_Foto ?>'" src="<?php echo $Paciente_Foto ?>" alt="Foto del Paciente" />
+            <div class="frame">
+                <div class="corner"></div>
+            </div>
+            <img id="pacienteFoto" onclick="location.href = '<?php echo $Paciente_Foto ?>'" src="<?php echo $Paciente_Foto ?>" alt="Foto del Sticker" />
             <br>
             <button type="button" id="capture">📷</button>
             <button style="margin-left: 80px;" type="button" id="selectFile" class="file-selector-button">📝</button>

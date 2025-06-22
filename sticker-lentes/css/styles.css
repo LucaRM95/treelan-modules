@@ -134,3 +134,54 @@ input[type="image"]:active {
   cursor: pointer; /* Cursor tipo puntero */
   padding: 5px; /* Espaciado interno */
 }
+
+.frame {
+  position: absolute;
+  top: 35%;
+  width: 85%;
+  height: 145px;
+}
+
+/* Top-left corner */
+.frame::before,
+.frame::after,
+.frame .corner::before,
+.frame .corner::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 5px solid #3232ff;
+}
+
+/* Top-left */
+.frame::before {
+  top: 0;
+  left: 0;
+  border-right: none;
+  border-bottom: none;
+}
+
+/* Top-right */
+.frame::after {
+  top: 0;
+  right: 0;
+  border-left: none;
+  border-bottom: none;
+}
+
+/* Bottom-left */
+.frame .corner::before {
+  bottom: 0;
+  left: 0;
+  border-right: none;
+  border-top: none;
+}
+
+/* Bottom-right */
+.frame .corner::after {
+  bottom: 0;
+  right: 0;
+  border-left: none;
+  border-top: none;
+}

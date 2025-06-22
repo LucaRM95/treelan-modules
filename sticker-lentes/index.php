@@ -26,7 +26,7 @@
             window.open(
                 "components/sticker_pict.php",
                 'ventanaSticker',
-                'width=800,height=600,resizable=yes,scrollbars=yes'
+                'width=850,height=650,resizable=yes,scrollbars=yes'
             );
         });
     </script>
