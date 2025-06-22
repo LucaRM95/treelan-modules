@@ -12,6 +12,7 @@
 
     <?php
     if (!$_POST) {
+        $p_id = $_POST['p_id'] ?? 'lenstick_';
     ?>
         <div class="container">
             <label for="capture">Presione espacio para capturar...</label>
@@ -48,9 +49,9 @@
     <?php
     } else {
         if (isset($_FILES['archivo1']) && $_FILES['archivo1']['size'] > 0) {
-            $pathImage = "imagenes/Sticker/";
-            $p_id = $_POST['p_id'] ?? 'unknown'; // make sure you receive this!
-            $Pname = date("His");
+            $pathImage = "../imagenes/Sticker/";
+            $p_id = $_POST['p_id'] ?? 'lenstick_';
+            $Pname = date("HisYmd");
             $ext1 = pathinfo($_FILES['archivo1']['name'], PATHINFO_EXTENSION);
             $ext1 = strtolower($ext1);
             $NewName = $p_id . $Pname . '.' . $ext1;
@@ -76,15 +77,15 @@
 
                     // Optional: DB insert/update (commented for now)
                     /*
-            $DF = "DELETE FROM paciente_foto WHERE Paciente_Id='$p_id'";
-            mysqli_query($_con, $DF) or die();
+                    $DF = "DELETE FROM paciente_foto WHERE Paciente_Id='$p_id'";
+                    mysqli_query($_con, $DF) or die();
 
-            $PF = "UPDATE pacientes SET Foto=1 WHERE Id='$p_id'";
-            mysqli_query($_con, $PF) or die();
+                    $PF = "UPDATE pacientes SET Foto=1 WHERE Id='$p_id'";
+                    mysqli_query($_con, $PF) or die();
 
-            $PM = "INSERT INTO paciente_foto SET Paciente_Id='$p_id', root='$uploadPath'";
-            mysqli_query($_con, $PM) or die();
-            */
+                    $PM = "INSERT INTO paciente_foto SET Paciente_Id='$p_id', root='$uploadPath'";
+                    mysqli_query($_con, $PM) or die();
+                    */
 
                     // Refresh the parent window and close this one
                     if (isset($_POST['noRecargar'])) {
